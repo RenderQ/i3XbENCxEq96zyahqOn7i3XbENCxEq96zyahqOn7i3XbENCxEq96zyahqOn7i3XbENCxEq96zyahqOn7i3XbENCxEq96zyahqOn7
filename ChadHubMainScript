@@ -1,4 +1,5 @@
 -- Devian (Developer) Release
+if _G.key = "i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7" then else print("master of skidding bruh")
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
@@ -240,7 +241,7 @@ ninjaSection:AddButton({
 charSection:AddSlider({
 	Name = "Speed",
 	Min = 16,
-	Max = 1024,
+	Max = 10244,
 	Default = 16,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
