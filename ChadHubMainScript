@@ -284,7 +284,7 @@ charSection:AddSlider({
 	Default = 16,
 	Color = Color3.fromRGB(255,255,255),
 	Save = true,
-	Flag = "jp",
+	Flag = "jpp",
 	Increment = 1,
 	ValueName = "is the jump height value",
 	Callback = function(yummyjp)
@@ -294,7 +294,7 @@ charSection:AddSlider({
 
 print(OrionLib.Flags["speed"].Value)
 
-print(OrionLib.Flags["jp"].Value)
+print(OrionLib.Flags["jpp"].Value)
 
 settingsSection:AddParagraph("Read before doing anything.", "Do not share your uniquely generated ID. It will change every time you execute this script again for security purposes. Staff never ask for this ID.")
 
