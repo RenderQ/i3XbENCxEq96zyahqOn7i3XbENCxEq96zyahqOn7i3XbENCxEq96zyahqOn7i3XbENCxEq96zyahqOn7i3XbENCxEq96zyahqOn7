@@ -1,5 +1,6 @@
 -- Devian (Developer) Release
-if _G.key = "i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7i3XbENCxEq96zyahqOn7" then else print("master of skidding bruh")
+if not getgenv().mainKey == "devian_dev001"
+elseif print("bad")
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
@@ -12,7 +13,7 @@ local arsenalTab = Window:MakeTab({
 })
 
 local rareTab = Window:MakeTab({
-	Name = "",
+	Name = "Rare Scripts",
 	Icon = "rbxassetid://10622209093",
 	PremiumOnly = false
 })
