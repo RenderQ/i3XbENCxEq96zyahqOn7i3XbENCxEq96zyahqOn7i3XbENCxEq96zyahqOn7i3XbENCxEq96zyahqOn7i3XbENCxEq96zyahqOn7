@@ -2,7 +2,7 @@
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Chad Hub - Devian Release (Dev)", HidePremium = true, SaveConfig = true, ConfigFolder = "getrekthubConfig", IntroEnabled = true, IntroText = "Welcome to get rekt Hub!", IntroIcon = "https://ibb.co/VmG2GVD"})
+local Window = OrionLib:MakeWindow({Name = "Chad Hub - Devian Release (Dev)", HidePremium = true, SaveConfig = true, ConfigFolder = "chadConfig", IntroEnabled = true, IntroText = "Welcome to Chad Hub! (devian v0.01 beta)", IntroIcon = "https://ibb.co/VmG2GVD"})
 
 local arsenalTab = Window:MakeTab({
 	Name = "Main Tab",
