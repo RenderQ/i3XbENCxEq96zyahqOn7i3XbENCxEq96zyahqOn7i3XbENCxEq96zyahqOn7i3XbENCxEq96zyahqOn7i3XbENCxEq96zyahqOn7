@@ -1,20 +1,23 @@
 -- Devian (Developer) Release
-if not getgenv().mainKey == "devian_dev001"
-elseif print("bad")
-
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({Name = "Chad Hub - Devian Release (Dev)", HidePremium = true, SaveConfig = true, ConfigFolder = "chadConfig", IntroEnabled = true, IntroText = "Welcome to Chad Hub! (devian v0.01 beta)", IntroIcon = "https://ibb.co/VmG2GVD"})
 
 local arsenalTab = Window:MakeTab({
 	Name = "Main Tab",
-	Icon = "rbxassetid://10622209093",
+	Icon = "rbxassetid://-1",
 	PremiumOnly = false
 })
 
 local rareTab = Window:MakeTab({
 	Name = "Rare Scripts",
-	Icon = "rbxassetid://10622209093",
+	Icon = "rbxassetid://-1",
+	PremiumOnly = false
+})
+
+local aboutTab = Window:MakeTab({
+	Name = "About & Settings",
+	Icon = "rbxassetid://-1",
 	PremiumOnly = false
 })
 
@@ -39,7 +42,7 @@ local madcitySection = arsenalTab:AddSection({
 })
 
 local susSection = arsenalTab:AddSection({
-	Name = "(sus section) Soon."
+	Name = "Sus Scripts"
 })
 
 local babftSection = arsenalTab:AddSection({
@@ -64,6 +67,18 @@ local mysterySection = arsenalTab:AddSection({
 
 local ninjaSection = arsenalTab:AddSection({
 	Name = "Ninja Tycoon"
+})
+
+local rareSection = rareTab:AddSection({
+	Name = "FE Rare Scripts (not organized)"
+})
+
+local aboutSection = aboutTab:AddSection({
+	Name = "About"
+})
+
+local settingsSection = aboutTab:AddSection({
+	Name = "Settings"
 })
 
 arsenalSection:AddButton({
@@ -114,7 +129,7 @@ madcitySection:AddButton({
 		})
 		OrionLib:MakeNotification({
 			Name = "Notification",
-			Content = "Our script tester bot has detected that this script isn't working as of now. You can contact the developers of this script.",
+			Content = "Our bot has detected that this script isn't working as of now. You can contact the developers of this script.",
 			Image = "rbxassetid://9754130800",
 			Time = 5
 		})
@@ -239,6 +254,42 @@ ninjaSection:AddButton({
   	end    
 })
 
+rareSection:AddButton({
+	Name = "FE Dog",
+	Callback = function()
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/RenderQ/rarescript1_-_R.STRING49102931093102931023910XCAMWPEK-C-OAW-CEA-ICV-_-I-QVQA-SDV_-AV-KE_-C/main/rarescript1.lua"), true))()
+		OrionLib:MakeNotification({
+			Name = "Rare-ness Meter",
+			Content = "Our bot has searched the internet far and wide and has found that this script is 35-45% known.",
+			Image = "rbxassetid://623548691",
+			Time = 5
+		})
+  	end    
+})
+
+rareSection:AddButton({
+	Name = "FE Walk on Walls",
+	Callback = function()
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/RenderQ/rarescript1_-_R.STRING49102931093102931023910XCAMWPEK-C-OAW-CEA-ICV-_-I-QVQA-SDV_-AV-KE_-C/main/rarescript2.lua"), true))()
+		OrionLib:MakeNotification({
+			Name = "Rare-ness Meter",
+			Content = "Our bot has searched the internet far and wide and has found that this script is 0-25% known.",
+			Image = "rbxassetid://623548691",
+			Time = 5
+		})
+  	end    
+})
+
+rareSection:AddParagraph("Don't beg.", "None yet. Don't beg for faster rare scripts, It's hard to find rare scripts.")
+
+susSection:AddLabel("Soon.")
+
+aboutSection:AddParagraph("About us.", "This entire script hub was originally a meme project, but it gained motion and we gained ideas. The reason it is paid is because this script took a while to make. Hope you enjoyed this script hub - bruv 2 aka BenLqcked 2022")
+
+aboutSection:AddParagraph("Which one of us is which??", "Bruv 2 (benlqcked) is the lead developer/scripter, Bruv makes ideas, The reason he is developer is because he contributed too much to be honest.")
+
+
+
 charSection:AddSlider({
 	Name = "Speed",
 	Min = 16,
@@ -246,6 +297,8 @@ charSection:AddSlider({
 	Default = 16,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
+	Save = true,
+	Flag = "speed",
 	ValueName = "is the speed value",
 	Callback = function(yummyspeed)
 		game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = yummyspeed
@@ -258,11 +311,23 @@ charSection:AddSlider({
 	Max = 10244,
 	Default = 16,
 	Color = Color3.fromRGB(255,255,255),
+	Save = true,
+	Flag = "jp",
 	Increment = 1,
 	ValueName = "is the jump height value",
 	Callback = function(yummyjp)
 		game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = yummyjp
 	end    
 })
+
+print(OrionLib.Flags["speed"].Value)
+
+print(OrionLib.Flags["jp"].Value)
+
+settingsSection:AddParagraph("Read before doing anything.", "Do not share your uniquely generated ID. It will change every time you execute this script again for security purposes. Staff never ask for this ID.")
+
+local id = game:GetService("HttpService"):GenerateGUID(false)
+
+settingsSection:AddParagraph("Your uniquely generated ID is ", id)
 
 OrionLib:Init()
