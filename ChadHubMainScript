@@ -260,7 +260,9 @@ susSection:AddLabel("Soon.")
 
 aboutSection:AddParagraph("About us.", "This entire script hub was originally a meme project, but it gained motion and we gained ideas. The reason it is paid is because this script took a while to make. Hope you enjoyed this script hub - bruv 2 aka BenLqcked 2022")
 
-aboutSection:AddParagraph("Which one of us is which??", "Bruv 2 (benlqcked) is the lead developer/scripter, Bruv makes ideas, The reason he is developer is because he contributed too much to be honest.")
+aboutSection:AddParagraph("Which one of us is which??", "RenderQ (benlqcked's main) is the lead developer/scripter, Bruv makes ideas, The reason he is developer is because he contributed too much to be honest.")
+
+aboutSection:AddParagraph("psst!", "the next update is maybe the axolotl release...")
 
 charSection:AddSlider({
 	Name = "Speed",
@@ -284,7 +286,7 @@ charSection:AddSlider({
 	Default = 16,
 	Color = Color3.fromRGB(255,255,255),
 	Save = true,
-	Flag = "jpp",
+	Flag = "jp",
 	Increment = 1,
 	ValueName = "is the jump height value",
 	Callback = function(yummyjp)
@@ -292,9 +294,11 @@ charSection:AddSlider({
 	end    
 })
 
-print(OrionLib.Flags["speed"].Value)
-
-print(OrionLib.Flags["jpp"].Value)
+while true do
+	wait(0.001)
+	print(OrionLib.Flags["speed"].Value)
+	print(OrionLib.Flags["jp"].Value)
+end
 
 settingsSection:AddParagraph("Read before doing anything.", "Do not share your uniquely generated ID. It will change every time you execute this script again for security purposes. Staff never ask for this ID.")
 
